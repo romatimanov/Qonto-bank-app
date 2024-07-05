@@ -1,0 +1,44 @@
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1111113f;
+  padding: 64px 0;
+}
+.rating-title {
+  font-size: 22px;
+  font-weight: 400;
+}
+.rating-group {
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+}
+.rating-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rating-brand {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.rating-text {
+  font-size: 20px;
+}
+.rating-brand__text {
+  font-size: 14px;
+  white-space: nowrap;
+}
+@media (max-width: 920px) {
+  .rating {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}

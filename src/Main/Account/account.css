@@ -1,0 +1,62 @@
+.account {
+  position: relative;
+}
+.account::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  left: 0;
+  bottom: 0;
+}
+.account-main {
+  padding-top: 120px;
+}
+
+.account-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.account-content {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 136px;
+}
+
+.account-title {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.account-subtitle {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.account-text {
+  font-size: 14px;
+  color: #b8b8b5;
+}
+.account-btn {
+  margin-bottom: 16px;
+}
+.account-card {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .account-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .account-img {
+    width: 50%;
+  }
+  .account-content {
+    margin-bottom: 40px;
+  }
+}
