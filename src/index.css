@@ -38,7 +38,11 @@
   border: 1px solid #fff;
   background-color: transparent;
 }
-
+.form-btn {
+  background: none;
+  border: none;
+  color: #000;
+}
 @media (max-width: 798px) {
   .main-container {
     padding: 0 30px;

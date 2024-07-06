@@ -5,12 +5,18 @@ import { Button } from "../../UI/Button/Button";
 import { useModal } from "../../Hook/useModal";
 import { Modal } from "../../Modal/Modal";
 import { Register } from "../../Auth/Register";
+import { Login } from "../../Auth/Login";
 
 export function Finance() {
   const {
     isOpen: isOpenRegister,
     openModal: openRegisterModal,
     closeModal: closeRegisterModal,
+  } = useModal();
+  const {
+    isOpen: isOpenLogin,
+    openModal: openLoginModal,
+    closeModal: closeLoginModal,
   } = useModal();
   return (
     <section className="finance">
@@ -51,7 +57,18 @@ export function Finance() {
       </div>
       {isOpenRegister && (
         <Modal onClose={closeRegisterModal}>
-          <Register />
+          <Register
+            closeRegisterModal={closeRegisterModal}
+            openLoginModal={openLoginModal}
+          />
+        </Modal>
+      )}
+      {isOpenLogin && (
+        <Modal onClose={closeLoginModal}>
+          <Login
+            openRegisterModal={openRegisterModal}
+            closeLoginModal={closeLoginModal}
+          />
         </Modal>
       )}
     </section>

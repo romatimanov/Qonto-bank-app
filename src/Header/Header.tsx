@@ -118,7 +118,7 @@ export function Header() {
             </button>
             <Button
               text="Open an account"
-              style="white-btn"
+              style="white-btn header-btn__account"
               onClick={openRegisterModal}
             />
           </div>
@@ -126,12 +126,18 @@ export function Header() {
       </div>
       {isOpenRegister && (
         <Modal onClose={closeRegisterModal}>
-          <Register />
+          <Register
+            closeRegisterModal={closeRegisterModal}
+            openLoginModal={openLoginModal}
+          />
         </Modal>
       )}
       {isOpenLogin && (
         <Modal onClose={closeLoginModal}>
-          <Login />
+          <Login
+            openRegisterModal={openRegisterModal}
+            closeLoginModal={closeLoginModal}
+          />
         </Modal>
       )}
     </header>

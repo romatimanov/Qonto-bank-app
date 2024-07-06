@@ -1,3 +1,4 @@
+import { Login } from "../../Auth/Login";
 import { Register } from "../../Auth/Register";
 import { useModal } from "../../Hook/useModal";
 import { Modal } from "../../Modal/Modal";
@@ -9,6 +10,11 @@ export function Sign() {
     isOpen: isOpenRegister,
     openModal: openRegisterModal,
     closeModal: closeRegisterModal,
+  } = useModal();
+  const {
+    isOpen: isOpenLogin,
+    openModal: openLoginModal,
+    closeModal: closeLoginModal,
   } = useModal();
   return (
     <section className="sign">
@@ -32,7 +38,18 @@ export function Sign() {
       </div>
       {isOpenRegister && (
         <Modal onClose={closeRegisterModal}>
-          <Register />
+          <Register
+            closeRegisterModal={closeRegisterModal}
+            openLoginModal={openLoginModal}
+          />
+        </Modal>
+      )}
+      {isOpenLogin && (
+        <Modal onClose={closeLoginModal}>
+          <Login
+            openRegisterModal={openRegisterModal}
+            closeLoginModal={closeLoginModal}
+          />
         </Modal>
       )}
     </section>

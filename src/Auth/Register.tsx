@@ -1,8 +1,16 @@
+import { useForm } from "react-hook-form";
 import { Button } from "../UI/Button/Button";
 import "./auth.css";
-import { useForm } from "react-hook-form";
 
-export function Register() {
+type RegisterProps = {
+  openLoginModal: () => void;
+  closeRegisterModal: () => void;
+};
+
+export function Register({
+  closeRegisterModal,
+  openLoginModal,
+}: RegisterProps) {
   const {
     register,
     handleSubmit,
@@ -11,6 +19,11 @@ export function Register() {
 
   const onSubmit = (data: unknown) => {
     console.log(data);
+  };
+
+  const handleOpenRegister = () => {
+    closeRegisterModal();
+    openLoginModal();
   };
 
   return (
@@ -56,7 +69,12 @@ export function Register() {
         )}
       </div>
 
-      <Button text="Зарегистрироваться" style="black-btn" />
+      <div className="form-btn__group">
+        <Button text="Зарегистрироваться" style="black-btn" />
+        <button onClick={handleOpenRegister} className="form-btn">
+          Войти
+        </button>
+      </div>
     </form>
   );
 }
