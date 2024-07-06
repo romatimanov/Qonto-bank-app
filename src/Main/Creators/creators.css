@@ -28,3 +28,10 @@
     grid-template-rows: auto;
   }
 }
+
+@media (max-width: 500px) {
+  .creators-card__content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

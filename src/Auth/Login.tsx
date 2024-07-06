@@ -12,7 +12,6 @@ export function Login() {
   const onSubmit = (data: unknown) => {
     console.log(data);
   };
-
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <div className="form-group">
