@@ -33,6 +33,11 @@
   background-color: #000;
   color: #fff;
 }
+.opacity-btn {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
 
 @media (max-width: 798px) {
   .main-container {

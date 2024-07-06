@@ -1,0 +1,36 @@
+.finance-card {
+  width: 100%;
+  max-width: 220px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.finance-card__header {
+  background-color: #efe9fe;
+  padding: 10px 17px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+.finance-card__body {
+  padding: 17px;
+  text-align: center;
+}
+.finance-card__image {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 17px;
+}
+.finance-card__title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+.finance-card__text {
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 798px) {
+  .finance-card {
+    max-width: 100%;
+  }
+}

@@ -1,7 +1,23 @@
 import logo from "../../public/image/logo.png";
 import { Button } from "../UI/Button/Button";
 import "./header.css";
+import { Modal } from "../Modal/Modal";
+import { Register } from "../Auth/Register";
+import { Login } from "../Auth/Login";
+import { useModal } from "../Hook/useModal";
+
 export function Header() {
+  const {
+    isOpen: isOpenRegister,
+    openModal: openRegisterModal,
+    closeModal: closeRegisterModal,
+  } = useModal();
+  const {
+    isOpen: isOpenLogin,
+    openModal: openLoginModal,
+    closeModal: closeLoginModal,
+  } = useModal();
+
   return (
     <header className="header">
       <div className="container">
@@ -36,11 +52,27 @@ export function Header() {
             </nav>
           </div>
           <div className="header-btn__group">
-            <button className="header-btn">Sign in</button>
-            <Button text="Open an account" style="white-btn" />
+            <button className="header-btn" onClick={openLoginModal}>
+              Sign in
+            </button>
+            <Button
+              text="Open an account"
+              style="white-btn"
+              onClick={openRegisterModal}
+            />
           </div>
         </div>
       </div>
+      {isOpenRegister && (
+        <Modal onClose={closeRegisterModal}>
+          <Register />
+        </Modal>
+      )}
+      {isOpenLogin && (
+        <Modal onClose={closeLoginModal}>
+          <Login />
+        </Modal>
+      )}
     </header>
   );
 }

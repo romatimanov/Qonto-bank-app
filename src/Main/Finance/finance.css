@@ -1,0 +1,43 @@
+.finance {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+.finance-body {
+  width: 100%;
+  margin: 0 auto;
+}
+.finance-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+.modules-content {
+  margin-bottom: 40px;
+}
+.finance-modules {
+  padding: 13px 17px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.modules-active {
+  background-color: #efe9fe;
+  margin-bottom: 10px;
+}
+.finance-card__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+@media (max-width: 798px) {
+  .finance-card__group {
+    gap: 15px;
+  }
+  .finance-modules {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -14,7 +14,7 @@ export function Discover() {
         src={image2}
         alt="card"
       />
-      <Button text="Discover our cards" style="discover-btn" />
+      <Button text="Discover our cards" style="opacity-btn" />
     </section>
   );
 }
