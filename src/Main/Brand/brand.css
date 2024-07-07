@@ -24,6 +24,7 @@
   margin: 0 auto !important;
 }
 .brand-slider {
+  min-height: 46px;
   margin-bottom: 50px;
 }
 .brand-card__content {
